@@ -1,0 +1,5 @@
+Create for docker environment.
+
+Run in terminal : docker-compose up -d --build
+
+Stop in terminal : docker-compose down.
