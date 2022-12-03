@@ -17,6 +17,7 @@ services:
     depends_on:
       - php
       - mysql
+      - smtp_vivestia
     networks:
       - wordpress
 
@@ -47,6 +48,16 @@ services:
       - 9000:9000
     volumes:
       - ./../wordpress:/var/www/html
+    networks:
+      - wordpress
+
+  smtp_vivestia:
+    image: rnwood/smtp4dev:latest
+    container_name: smtp_vivestia
+    restart: always
+    ports:
+      - 5000:80
+      - 2525:25
     networks:
       - wordpress
 
