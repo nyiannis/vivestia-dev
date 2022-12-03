@@ -1,5 +1,15 @@
-Create for docker environment.
+Create for docker environment for development.
 
-Run in terminal : docker-compose up -d --build
+Configuration local environment:
+
+- Update hosts file:
+    127.0.0.1 vivestia.dev;
+
+Run docker yml files:
+- Run in terminal : docker-compose up -d --build
+
+Configuration WP:
+- Connect to https://vivestia.dev
+- Configure wordpress base on the UI.
 
 Stop in terminal : docker-compose down.
