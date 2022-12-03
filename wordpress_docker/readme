@@ -1,11 +1,17 @@
 Create for docker environment for development.
 
-Configuration local environment:
+URLS:
+MainSite: https://vivestia.dev
+
+SMTP DEV: http://localhost:9002
+MyPHP Admin: http://localhost:9004
+
+Configuration local environment hosts:
 
 - Update hosts file:
     127.0.0.1 vivestia.dev;
 
-Run docker yml files:
+Initial docker yml for the first time:
 - Run in terminal : docker-compose up -d --build
 
 Configuration WP:
@@ -13,3 +19,11 @@ Configuration WP:
 - Configure wordpress base on the UI.
 
 Stop in terminal : docker-compose down.
+
+Install/Configuration WP-CLI
+View :
+- docker-compose run --rm wp user list
+Install Plugins:
+- docker-compose run --rm wp plugin install wordpress-seo
+Activate:
+- docker-compose run --rm wp plugin activate wordpress-seo

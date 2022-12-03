@@ -39,6 +39,21 @@ services:
     networks:
       - wordpress
 
+  phpmyadmin:
+    image: phpmyadmin:latest
+    restart: always
+    ports:
+      - 9004:80
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mysql
+      - PMA_VERBOSE=mysql
+      - PMA_PORT=3306
+      - PMA_USER=wp
+      - PMA_PASSWORD=P@ssw0rd!
+    networks:
+      - wordpress
+
   php:
     build:
       context: .
@@ -56,7 +71,7 @@ services:
     container_name: smtp_vivestia
     restart: always
     ports:
-      - 5000:80
+      - 9002:80
       - 2525:25
     networks:
       - wordpress
