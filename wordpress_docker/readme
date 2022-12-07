@@ -18,7 +18,7 @@ Configuration WP:
 - Connect to https://vivestia.dev
 - Configure wordpress base on the UI.
 
-Stop in terminal : docker-compose down.
+Stop in terminal : docker-compose down
 
 Install/Configuration WP-CLI
 View :
