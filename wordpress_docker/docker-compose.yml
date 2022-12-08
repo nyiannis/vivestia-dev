@@ -84,5 +84,10 @@ services:
     entrypoint: ['wp', '--allow-root']
     volumes:
       - ./../wordpress:/var/www/html
+    environment:
+      WORDPRESS_DB_HOST: mysql:3306
+      WORDPRESS_DB_USER: wp
+      WORDPRESS_DB_PASSWORD: P@ssw0rd!
+      WORDPRESS_DB_NAME: wp
     networks:
       - wordpress
